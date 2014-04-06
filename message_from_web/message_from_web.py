@@ -14,7 +14,7 @@ class MessageFromWeb(BasePlugin):
 	Based on "Server status query plugin v 1.1" plugin
 	by ZVorgan (https://bitbucket.org/zvorgan/starrypy-server-status/)
     """
-    name = "message_from_web
+    name = "message_from_web"
     auto_activate = True
 
     def activate(self):

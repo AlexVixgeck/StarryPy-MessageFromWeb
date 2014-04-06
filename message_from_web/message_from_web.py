@@ -10,12 +10,11 @@ from datetime import datetime
 
 class MessageFromWeb(BasePlugin):
     """
-    Receives and broadcasts messages from the Web.
+	Receives and broadcasts messages from the Web.
 	Based on "Server status query plugin v 1.1" plugin
 	by ZVorgan (https://bitbucket.org/zvorgan/starrypy-server-status/)
     """
-    name = "server_status"
-    depends = ['player_manager']
+    name = "message_from_web
     auto_activate = True
 
     def activate(self):
@@ -23,10 +22,10 @@ class MessageFromWeb(BasePlugin):
 
         try:
             self.query_port = self.config.plugin_config["query_port"]
-            self.logger.info("Query port listen on %s.", self.query_port)
+            self.logger.info("Receiving port listen on %s.", self.query_port)
         except:
-            self.query_port = 21124
-            self.logger.info("Query port not set in config. Default port: %s.", self.query_port)
+            self.query_port = 21337
+            self.logger.info("Receiving port not set in config. Default port: %s.", self.query_port)
 
         self.listen_query();
 
